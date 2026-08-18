@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254" role="img" aria-label="Itinerarium">
+  <title>Itinerarium</title>
+  <!--
+    Redrawn from its own geometry rather than traced. Every shape is centred on
+    (627, 480): the head is a true circle, the tail is the pair of tangents from
+    the tip to that circle, so the joint is smooth by construction rather than by
+    how closely a trace followed it.
+  -->
+  <g fill="#1a5359">
+    <!-- The pin. Tangents from the tip (627, 1222) to the head circle meet it at
+         (270, 751) and (984, 751), which is what makes the tail flow out of the
+         head with no seam. The 254 degree arc is the rest of the head. -->
+    <path d="M270 750.6A448 448 0 1 1 984 750.6L644.6 1197.6a22 22 0 0 1-35.2 0Z"/>
+  </g>
+  <circle cx="627" cy="480" r="321" fill="#fbf6ef"/>
+  <!-- North, east, south and west, at the same radius on every side, and over
+       the face rather than under it. -->
+  <g fill="#1a5359">
+    <rect x="614.5" y="188" width="25" height="72" rx="12.5"/>
+    <rect x="614.5" y="700" width="25" height="72" rx="12.5"/>
+    <rect x="335" y="467.5" width="72" height="25" rx="12.5"/>
+    <rect x="847" y="467.5" width="72" height="25" rx="12.5"/>
+  </g>
+  <!-- The needle is one rhombus split along its short diagonal: the arm that
+       points is the warm one. -->
+  <path d="M825 282 682 535 572 425Z" fill="#ed9320"/>
+  <path d="M429 678 572 425 682 535Z" fill="#1a5359"/>
+  <circle cx="627" cy="480" r="40" fill="#fbf6ef"/>
+</svg>

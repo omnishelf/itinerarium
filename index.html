@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- maximum-scale and user-scalable turn page zoom off. iOS Safari
+         ignores user-scalable=no while browsing, for accessibility, and
+         honours it in standalone mode, which is how Itinerarium is used. It
+         ships with the viewer's own zoom (ImageViewer.tsx) and never
+         without it: the pinch this removes is the one a traveller would
+         otherwise reach for to inspect a photograph. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <!-- Both spellings, on purpose. `mobile-web-app-capable` is the standard
+         one and the only one Chrome reads; it logs a deprecation warning for
+         the apple-prefixed name. iOS Safari reads only the apple-prefixed
+         one, and that is the browser Itinerarium is installed from, so dropping
+         it would cost the standalone launch this app exists to have. -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#131313" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <!-- The one place the app's name is still typed out: HTML cannot import,
+         and a build-time transform for one word is not worth its weight. The
+         source everything else reads is APP_NAME in src/lib/app.ts, so change
+         both together. -->
+    <title>Itinerarium</title>
+    <script type="module" crossorigin src="./assets/index-RrKWyFVX.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BwMSfQ_4.css">
+  <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
